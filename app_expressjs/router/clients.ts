@@ -1,10 +1,9 @@
 import Router = require("express");
+import clientsController = require("../controller/clientsController");
 
 const router = Router();
 
-router.get('/', (req, res) =>{
-    res.send("Rota inicial")
-});
+router.get('/', clientsController.index);
 
 router.get('/sobrenos', (req, res) =>{
     res.send("Rota falando sobre a empresa")
